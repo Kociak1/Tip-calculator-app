@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+$Strong-cyan: hsl(172, 67%, 45%);
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Dark-grayish-cyan2: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Light-grayish-cyan2: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+@mixin font {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+@mixin image($url) {
+  background-image: url($url);
+  background-size: certain;
+  background-repeat: no-repeat;
+  background-position: left 20px top 50%;
+}
+::placeholder {
+  @include font;
+  color: hsl(186, 14%, 43%);
+}
+input {
+  width: 100%;
+  padding: 0.4rem 0.9rem;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  @include font;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 1rem;
+  border: 2px solid transparent;
+}
+input:hover {
+  border-color: $Strong-cyan;
+}
+label {
+  background-color: $Very-dark-cyan;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0;
+  color: $White;
+}
+input[type="radio"]:checked + label {
+  background-color: $Strong-cyan;
+  color: $Very-dark-cyan;
+  font-weight: bold;
+}
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: $Light-grayish-cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  color: hsl(186, 14%, 43%);
+  min-height: 100vh;
+}
+#logo {
+  margin: 3rem 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+}
+
+main {
+  border-radius: 2rem 2rem 0 0;
+  background-color: $White;
+  padding: 1.5rem;
+  height: 100%;
+  #bill {
+    @include image("/images/icon-dollar.svg");
+  }
+  #numbers {
+    @include image("/images/icon-person.svg");
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+  .tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+    color: $Light-grayish-cyan;
+    padding-bottom: 1.5rem;
+    padding-top: 0.8rem;
+  }
+  .input.zero {
+    input {
+      border: 2px solid red;
+    }
+    p {
+      display: block;
+      position: absolute;
+      top: -1.7rem;
+      right: 0;
+      color: red;
+    }
+  }
+  .tip2 {
+    margin-top: 1rem;
+    background-color: $Very-dark-cyan;
+    padding: 1.2rem;
+    text-align: left;
+    border-radius: 1rem;
+    width: 100%;
+    .colb {
+      text-align: right;
+      font-size: 1.953rem;
+      font-weight: bold;
+      color: $Strong-cyan;
+    }
+
+    input[type="button"] {
+      text-align: center;
+      background-color: $Strong-cyan;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      padding: 0.6rem 0;
+    }
+    input[type="button"]:hover {
+      background-color: hsl(172, 67%, 65%);
+    }
+    p {
+      font-weight: normal;
+      color: $Light-grayish-cyan2;
+      text-align: left;
+      font-size: 1rem;
+      span {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: $Dark-grayish-cyan2;
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    justify-content: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 10px 0px hsla(188, 14%, 56%, 0.219);
+
+    .tip1 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .tip2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  article,
+  .tip2 {
+    width: 23rem;
+    height: 23rem;
+  }
+  #bill {
+    margin-bottom: 2rem;
+  }
+}
+input[type="button"]:hover,
+label:hover {
+  background-color: hsl(172, 67%, 65%);
+}
+#custom {
+  &:hover,
+  &:focus {
+    border: 2px solid hsl(172, 67%, 65%);
+  }
+}
+.input {
+  position: relative;
+  p {
+    display: none;
+  }
+}

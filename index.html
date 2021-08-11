@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<img src="images/logo.svg" alt="logo" id="logo" />
+
+<main>
+
+  <article>
+  <p>Bill</p> 
+<input type="text" id="bill">
+ <p>Select Tip %</p> 
+  <div class="tip tip1">
+    <input type="radio" name="r1" id="r1" value="5"> <label for="r1">5%</label>
+    <input type="radio" name="r1" id="r2" value="10"> <label for="r2">10%</label>
+    <input type="radio" name="r1" id="r3" value="15"> <label for="r3">15%</label>
+    <input type="radio" name="r1" id="r4" value="25"> <label for="r4">25%</label>
+    <input type="radio" name="r1" id="r5" value="50"> <label for="r5">50%</label>
+    
+      <input type="text" id="custom" placeholder="Custom" style="margin: 0;">
+    </div>
+ 
+ <p>Number of People</p> 
+ <div class="input">
+   <input type="text" id="numbers">
+   <p>Can't be zero</p>
+ </div>
+
+</article>
+
+
+<div class="tip2">
+  <div class="tip">
+  <div >
+   <p>Tip Amount <br>
+     <span>/ person</span>
+   </p> 
+  
+  </div>
+  <div class="colb">
+    $<span id="amount">0.00</span>
+  </div>
+  <div >
+  <p>Total <br>
+    <span>
+      / person
+    </span>
+  </p>   
+  
+  </div>
+  <div class="colb">
+    $<span id="total">0.00</span>
+  </div>
+</div>
+<input type="button" value="Reset" style="margin:0;">
+</div>
+
+  
+
+ 
+
+  
+</main>
+ 
+  
+</body>
+</html>

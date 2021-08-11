@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5e7a7d;
+}
+
+:-ms-input-placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5e7a7d;
+}
+
+::-ms-input-placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5e7a7d;
+}
+
+::placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5e7a7d;
+}
+
+input {
+  width: 100%;
+  padding: 0.4rem 0.9rem;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  text-align: right;
+  background-color: #f4fafa;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00494d;
+  margin-bottom: 1rem;
+  border: 2px solid transparent;
+}
+
+input:hover {
+  border-color: #26c0ab;
+}
+
+label {
+  background-color: #00494d;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0;
+  color: white;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #5e7a7d;
+  min-height: 100vh;
+}
+
+#logo {
+  margin: 3rem 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+}
+
+main {
+  border-radius: 2rem 2rem 0 0;
+  background-color: white;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+main #bill {
+  background-image: url("/images/icon-dollar.svg");
+  background-size: certain;
+  background-repeat: no-repeat;
+  background-position: left 20px top 50%;
+}
+
+main #numbers {
+  background-image: url("/images/icon-person.svg");
+  background-size: certain;
+  background-repeat: no-repeat;
+  background-position: left 20px top 50%;
+}
+
+main input[type="radio"] {
+  display: none;
+}
+
+main .tip {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+  color: #c5e4e7;
+  padding-bottom: 1.5rem;
+  padding-top: 0.8rem;
+}
+
+main .input.zero input {
+  border: 2px solid red;
+}
+
+main .input.zero p {
+  display: block;
+  position: absolute;
+  top: -1.7rem;
+  right: 0;
+  color: red;
+}
+
+main .tip2 {
+  margin-top: 1rem;
+  background-color: #00494d;
+  padding: 1.2rem;
+  text-align: left;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+main .tip2 .colb {
+  text-align: right;
+  font-size: 1.953rem;
+  font-weight: bold;
+  color: #26c0ab;
+}
+
+main .tip2 input[type="button"] {
+  text-align: center;
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  padding: 0.6rem 0;
+}
+
+main .tip2 input[type="button"]:hover {
+  background-color: #6ae2d2;
+}
+
+main .tip2 p {
+  font-weight: normal;
+  color: #f4fafa;
+  text-align: left;
+  font-size: 1rem;
+}
+
+main .tip2 p span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #7f9c9f;
+}
+
+@media (min-width: 1440px) {
+  body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(127, 154, 159, 0.219);
+            box-shadow: 0px 4px 10px 0px rgba(127, 154, 159, 0.219);
+  }
+  main .tip1 {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+  main .tip2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  article,
+  .tip2 {
+    width: 23rem;
+    height: 23rem;
+  }
+  #bill {
+    margin-bottom: 2rem;
+  }
+}
+
+input[type="button"]:hover,
+label:hover {
+  background-color: #6ae2d2;
+}
+
+#custom:hover, #custom:focus {
+  border: 2px solid #6ae2d2;
+}
+
+.input {
+  position: relative;
+}
+
+.input p {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
