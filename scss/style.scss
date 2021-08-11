@@ -45,7 +45,8 @@ input {
   border: 2px solid transparent;
 }
 input:hover {
-  border-color: $Strong-cyan;
+  border-color: hsl(172, 67%, 65%);
+  cursor: pointer;
 }
 label {
   background-color: $Very-dark-cyan;
@@ -190,6 +191,7 @@ main {
 input[type="button"]:hover,
 label:hover {
   background-color: hsl(172, 67%, 65%);
+  cursor: pointer;
 }
 #custom {
   &:hover,

@@ -53,7 +53,8 @@ input {
 }
 
 input:hover {
-  border-color: #26c0ab;
+  border-color: #6ae2d2;
+  cursor: pointer;
 }
 
 label {
@@ -240,6 +241,7 @@ main .tip2 p span {
 input[type="button"]:hover,
 label:hover {
   background-color: #6ae2d2;
+  cursor: pointer;
 }
 
 #custom:hover, #custom:focus {

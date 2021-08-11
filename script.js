@@ -5,6 +5,7 @@ const numbers = document.querySelector('#numbers')
 
 const amount = document.querySelector('#amount')
 const total = document.querySelector('#total')
+const reset = document.querySelector('#reset')
 
 
 let tip = 0, peoples =0, Bill = 0, Amount = 0, Total = 0
@@ -46,3 +47,12 @@ if(warunek) {
     total.textContent = '0.00'
 }
 }
+
+reset.addEventListener('click', () => {
+    inputF = document.querySelectorAll('input[type="text"')
+    inputF.forEach(inp => inp.value = '')
+    inputs.forEach(input => input.checked = false)
+    tip = 0, peoples =0, Bill = 0, Amount = 0, Total = 0
+    amount.textContent = '0.00'
+    total.textContent = '0.00'
+})
