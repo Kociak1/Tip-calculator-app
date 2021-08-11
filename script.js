@@ -39,9 +39,9 @@ function calculate() {
 let warunek = [tip, peoples, Bill].every(w => w != 0)
 if(warunek) {
     Amount = Math.round(Bill / peoples *  tip) / 100
-    amount.textContent = Amount
+    amount.textContent = `${Amount}`.substr(0,5)
     Total = Math.round(Bill / peoples * 100) / 100 + Amount
-    total.textContent = Total
+    total.textContent = `${Total}`.substr(0,5)
 } else {
     amount.textContent = '0.00'
     total.textContent = '0.00'
