@@ -55,4 +55,5 @@ reset.addEventListener('click', () => {
     tip = 0, peoples =0, Bill = 0, Amount = 0, Total = 0
     amount.textContent = '0.00'
     total.textContent = '0.00'
+    numbers.parentNode.classList.remove('zero')
 })
