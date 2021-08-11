@@ -87,10 +87,10 @@ main {
   padding: 1.5rem;
   height: 100%;
   #bill {
-    @include image("./images/icon-dollar.svg");
+    @include image("images/icon-dollar.svg");
   }
   #numbers {
-    @include image("./images/icon-person.svg");
+    @include image("images/icon-person.svg");
   }
 
   input[type="radio"] {

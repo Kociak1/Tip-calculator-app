@@ -109,14 +109,14 @@ main {
 }
 
 main #bill {
-  background-image: url("./images/icon-dollar.svg");
+  background-image: url("images/icon-dollar.svg");
   background-size: certain;
   background-repeat: no-repeat;
   background-position: left 20px top 50%;
 }
 
 main #numbers {
-  background-image: url("./images/icon-person.svg");
+  background-image: url("images/icon-person.svg");
   background-size: certain;
   background-repeat: no-repeat;
   background-position: left 20px top 50%;
